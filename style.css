@@ -1,0 +1,215 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #f8f8f8;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5a4b8c; /* Pet-friendly purple */
+}
+
+/* Hero Section */
+.hero {
+    background: #eef2f7; /* Light background */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #3e3165;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #7d6bbd; /* Brighter purple */
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background: #5a4b8c;
+}
+
+.hero-image img {
+    max-width: 350px; /* Adjust as needed */
+    border-radius: 15px; /* Optional */
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #3e3165;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allows steps to wrap on smaller screens */
+}
+
+.step {
+    flex-basis: 22%; /* Aim for 4 steps per row on larger screens */
+    min-width: 200px; /* Minimum width before wrapping */
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.step-icon {
+    background: #7d6bbd;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto 1rem auto;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #5a4b8c;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #5a4b8c;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+.cta-section h2 {
+     font-size: 2rem;
+     margin-bottom: 1rem;
+}
+.cta-section p {
+     margin-bottom: 1.5rem;
+}
+.cta-section .cta-button {
+    background: #fff;
+    color: #5a4b8c;
+}
+.cta-section .cta-button:hover {
+    background: #eee;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #ddd;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack text and image on mobile */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .steps {
+        flex-direction: column; /* Stack steps vertically */
+        align-items: center;
+    }
+
+    .step {
+        flex-basis: 80%; /* Take more width on mobile */
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-content {
+        flex-direction: row; /* Side-by-side layout */
+        text-align: left;
+        gap: 3rem;
+    }
+     .hero-text {
+         flex: 1;
+     }
+     .hero-image {
+         flex: 1;
+         text-align: center;
+     }
+     .hero-text p {
+         margin-left: 0;
+         margin-right: 0;
+     }
+}
